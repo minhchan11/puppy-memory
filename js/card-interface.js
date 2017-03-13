@@ -5,10 +5,14 @@ $(document).ready(function(){
   var cardTwo;
   var counter = 0;
   $("input#card").click(function(){
+    $(".black").removeClass("black");
+    var className;
     if (counter === 0){
+      className = "background" + $(this).val().toString();
       var value = $(this).val();
       cardOne = new Card(value);
       $(this).addClass("first");
+      $(this).addClass(className);
       counter++;
       console.log(counter);
     }
@@ -17,12 +21,15 @@ $(document).ready(function(){
       cardTwo = new Card(valueTwo);
       if(cardOne.matchChecker(cardTwo))
       {
-        $(this).addClass("redbackground");
-        $(".first").addClass("redbackground");
+        className = "background" + $(this).val().toString();
+        $(this).addClass(className);
         $(".first").removeClass("first");
       }
       else
       {
+        className = "background" + $(".first").val().toString();
+        $(this).addClass("black");
+        $(".first").removeClass(className);
         $(".first").removeClass("first");
       }
       counter--;

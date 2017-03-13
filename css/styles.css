@@ -1,12 +1,25 @@
 input {
   width: 100px;
   height: 100px;
+  color: rgba(0, 0, 0, 0);
 }
 
 .redbackground{
   background: pink;
+  color:black;
 }
 
 .first {
-  background: pink;
+  color:black;
+  color: rgba(0, 0, 0, 0);
+}
+
+.black{
+  color:black;
+}
+
+.background1{
+  background-image: url(../img/1.jpg);
+  background-size: cover;
+  pointer-events : none;
 }
