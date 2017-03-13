@@ -1,3 +1,4 @@
+
 function Card(number){
   this.number = number;
   this.flip = false;
