@@ -14,12 +14,33 @@ input {
   color: rgba(0, 0, 0, 0);
 }
 
-.black{
-  color:black;
-}
-
 .background1{
   background-image: url(../img/1.jpg);
+  background-size: cover;
+  pointer-events : none;
+}
+.background2{
+  background-image: url(../img/2.jpg);
+  background-size: cover;
+  pointer-events : none;
+}
+.background3{
+  background-image: url(../img/3.jpg);
+  background-size: cover;
+  pointer-events : none;
+}
+.background4{
+  background-image: url(../img/4.jpg);
+  background-size: cover;
+  pointer-events : none;
+}
+.background5{
+  background-image: url(../img/5.jpg);
+  background-size: cover;
+  pointer-events : none;
+}
+.background6{
+  background-image: url(../img/6.jpg);
   background-size: cover;
   pointer-events : none;
 }

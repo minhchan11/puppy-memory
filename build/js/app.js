@@ -18,22 +18,20 @@ $(document).ready(function(){
       console.log(counter);
     }
     else {
+      className = "background" + $(this).val().toString();
+      $(this).addClass(className);
       var valueTwo = $(this).val();
       cardTwo = new Card(valueTwo);
       if(cardOne.matchChecker(cardTwo))
       {
-        className = "background" + $(this).val().toString();
-        $(this).addClass(className);
-        $(this).prop("disabled",true);
-        $("first").prop("disabled",true);
         $(".first").removeClass("first");
       }
       else
       {
-        className = "background" + $(".first").val().toString();
+        var firstClassName = "background" + $(".first").val().toString();
         $(this).addClass("black");
-        $(".first").removeClass(className);
-        $(".first").removeClass("first");
+        setTimeout(function () {$(".first").removeClass(firstClassName);$(".first").removeClass("first");}, 500);
+        setTimeout(function () {$(".black").removeClass(className);$(".black").removeClass("black") }, 500);
       }
       counter--;
       console.log(counter);
